@@ -77,6 +77,9 @@
     font-weight: 400;
     line-height: 26px; /* 162.5% */
 }
+.choose__card:hover > .choose__img{
+    filter: invert(100%);
+}
 .choose__card:active{
     border-radius: 8px;
     background: #0E8784;
@@ -88,6 +91,9 @@
     font-style: normal;
     font-weight: 900;
     line-height: 32px; /* 133.333% */
+}
+.choose__card:active > .choose__img{
+    filter: none;
 }
 .choose__card:active > .choose__card-text{
     color: #FEFCF7;
