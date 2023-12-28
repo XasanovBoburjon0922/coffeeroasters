@@ -1,15 +1,17 @@
 .hero-section {
-    height: 582px;
     margin-top: 50px;
     background-image: url("../images/hero.png");
     background-repeat: no-repeat;
-    background-size: cover;
-    padding: 92px 0 0 80px;
+    background-size: 100% 100%;
+    padding: 92px 0 90px 80px;
     border-radius: 10px;
+}
+.hamburger-btn{
+    display: none;
 }
 .hero {
     display: flex;
-    width: 493px;
+    max-width: 493px;
     flex-direction: column;
     justify-content: center;
     flex-shrink: 0;
@@ -24,7 +26,7 @@
     margin-bottom: 32px;
 }
 .hero__text {
-    width: 417px;
+    max-width: 417px;
     color: #FEFCF7;
     font-family: Barlow;
     font-size: 16px;
@@ -63,4 +65,93 @@
     font-style: normal;
     font-weight: 900;
     line-height: 25px; /* 138.889% */
+}
+.collection__text{
+    color: #333D4B;
+    text-align: center;
+    font-family: Barlow;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; 
+}
+@media only screen and (max-width: 820px){
+    .hero-section{
+        background-image: url("../images/tablet-hero-img.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 92px 0 90px 85px;
+    }
+    .collection__text{
+        @include collection__text;
+    }
+    .hero{
+        max-width: 372px;
+    }
+    .hero__title{
+        color: #FEFCF7;
+        font-family: Fraunces;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 48px; /* 100% */
+    }
+    .hero__text{
+        color: #FEFCF7;
+        font-family: Barlow;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+        opacity: 0.8;
+    }
+    .hero__button{
+        margin-bottom: 90px;
+    }
+}
+@media only screen and (max-width: 575px){
+    .hero-section{
+        padding: 100px 24px 66px;
+        background-image: url("../../images/mobile-hero-img.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+    .collection__text{
+        @include collection__text;
+    }
+    .hero{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .hero__title{
+        color: #FEFCF7;
+        text-align: center;
+        font-family: Fraunces;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 40px; 
+        margin-bottom: 24px;
+    }
+    .hero__text{
+        color: #FEFCF7;
+        text-align: center;
+        font-family: Barlow;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px; /* 166.667% */
+        opacity: 0.8;
+    }
+    .header__nav{
+        display: none;
+    }
+    .hamburger-btn{
+        display: block;
+        border: none;
+        background: transparent;
+    }
 }

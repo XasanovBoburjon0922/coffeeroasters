@@ -2,35 +2,89 @@
     padding-top: 249px;
     background-image: url("../../images/collection-bg.png");
     background-repeat: no-repeat;
-    background-size:  1116px, 196px;
-    background-color: linear-gradient(180deg, rgba(254, 252, 247, 0.00) 0%, #FEFCF7 100%);
-    background-position: calc(50% + 20px) calc(50% - 102px);
+    background-position: center 140px;
+    background-size: 100%;
 }
 .collection{
+    max-width: 100%;
     display: flex;
     gap: 30px;
-    width: 255px;
     align-items: center;
     margin-bottom: 200px;
-    padding-left: 85px;
+}
+.collection__item{
+    max-width: 100%;
+}
+.collection__list{
+    display: flex;
+    flex-direction: column;
 }
 .collection__title{
-    color: #333D4B;
     text-align: center;
-    font-family: Fraunces;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: 32px; /* 133.333% */
+    @include site-title();
+    color: #333D4B;
     margin-top: 70px;
     margin-bottom: 24px;
 }
 .collection__text{
+    @include site-text();
     color: #333D4B;
-    text-align: center;
-    font-family: Barlow;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 26px; /* 162.5% */
+}
+@media only screen and (max-width: 1090px){
+    .collection-section{
+        padding: 202px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .collection{
+        max-width: 100%;
+        flex-direction: column;
+    }
+    .collection__content{
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .collection__item{
+        display: flex;
+        flex-direction: column;
+        max-width: 283px;
+    }
+    .collection__list{
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 575px){
+    .collection-section{
+        padding: 202px 0 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .collection{
+        max-width: 100%;
+    }
+    .collection__content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .collection__item{
+        display: flex;
+        flex-direction: column;
+        max-width: 283px;
+    }
+
+    img.collection__img{
+        max-width: 200px;
+    }
+    .collection__title{
+        text-align: center;
+    }
+    .collection__text{
+        text-align: center;
+    }
 }

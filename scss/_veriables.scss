@@ -1,0 +1,18 @@
+@mixin font(){
+    font-family: "Fraunces", serif;
+}
+@mixin site-title($title-color:#FEFCF7, $font-size:40px, $line-height: 48px){
+    @include font();
+    font-size: $font-size;
+    line-height: $line-height;
+    font-style: normal;
+    font-weight: 900;
+}
+@mixin site-text($title-color:#FEFCF7, $font-size:16px, $line-height: 26px, $opacity:1){
+    @include font();
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $line-height;
+    opacity: $opacity;
+}
