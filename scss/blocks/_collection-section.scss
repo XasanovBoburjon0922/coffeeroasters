@@ -20,7 +20,6 @@
     flex-direction: column;
 }
 .collection__title{
-    text-align: center;
     @include site-title();
     color: #333D4B;
     margin-top: 70px;
