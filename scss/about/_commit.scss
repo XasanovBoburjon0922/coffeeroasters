@@ -8,7 +8,7 @@
     align-items: center;
 }
 .commit__content {
-    width: 538px;
+    max-width: 538px;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -28,4 +28,41 @@
     font-style: normal;
     font-weight: 400;
     line-height: 26px; /* 162.5% */
+}
+@media only screen and (max-width: 866px){
+    .commit__title {
+        color: #333D4B;
+        font-family: Fraunces;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 48px;
+    }
+    .commit__text {
+        color: #333D4B;
+        font-family: Barlow;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 25px;
+    }
+    .commit{
+        gap: 69px;
+    }
+    .commit-img{
+        max-width: 281px;
+        height: 470px;
+    }
+}
+@media only screen and (max-width: 580px){
+    .commit{
+        display: flex;
+        flex-direction: column;
+    }
+    .commit__title{
+        text-align: center;
+    }
+    .commit__text{
+        text-align: center;
+    }
 }

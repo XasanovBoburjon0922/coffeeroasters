@@ -9,9 +9,7 @@
 .footer__logo-link {
     display: inline-block;
 }
-.footer__wrap {
 
-}
 .footer__list {
     display: flex;
     align-items: center;
@@ -51,3 +49,27 @@
 .instagram-icon:hover{
     filter: invert(40%);
 }
+  @media only screen and (max-width: 842px){
+    .footer__box{
+      display: flex;
+      flex-direction: column;
+    }
+    .footer__wrap{
+      margin-top: 32px;
+      margin-bottom: 65px;
+    }
+  }
+  @media only screen and (max-width: 508px){
+    .footer__list{
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .footer__item + .footer__item{
+      margin-left: 0;
+    }
+    .img{
+      width: 217.846px;
+      height: 24px;
+    }
+  }
